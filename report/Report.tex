@@ -1,0 +1,282 @@
+\documentclass[11pt,a4paper,twoside,english,svgnames]{report}
+\usepackage[utf8]{inputenc} % force the use of utf8
+\usepackage[T1]{fontenc} % font encoding, allows accents
+\usepackage[papersize={21cm,29.7cm},top= 2.5cm,bottom=2.5cm, inner=2.5cm ,outer=3cm]{geometry} % page formatting
+\usepackage[english]{babel} % translate everything in the desired language: table of contents, etc. 'english' can be replaced with 'francais'
+\usepackage{graphicx} % images management
+\usepackage{wrapfig} % floating images
+\usepackage{array} % allow arrays
+\usepackage{fancyhdr} % headers/footers management (overrides empty, plain and headings)
+\usepackage{listings} % code insertion (MUST BE WRITTEN AFTER BABEL)
+\usepackage[nottoc,numbib]{tocbibind} % bib in toc
+\usepackage{pdfpages} % include PDF documents
+\usepackage{enumitem} % for /setlist
+\usepackage{color,soul} % add some colors and hightlight
+\usepackage{xcolor} % more colors
+\usepackage[hyphens]{url} % auto break lines in URL
+\usepackage[hidelinks,  colorlinks  = true, % no borders, colors enabled
+                        anchorcolor = blue,
+                        linkcolor   = black, % links in table of contents
+                        urlcolor    = blue,
+                        citecolor   = blue]{hyperref}
+\usepackage[%nonumberlist,% no page number
+            toc,% displayed in toc
+            numberedsection,% displayed as a numbered section in toc
+            xindy]{glossaries} % glossary with xindy style. MUST BE WRITTEN AFTER HYPERREF
+\setglossarystyle{listgroup}
+
+\sethlcolor{cyan} % package soul
+\newcommand{\file}[1]{\hl{\emph{#1}}} % highlight a file URI
+
+\makeglossaries
+\loadglsentries{glossary.tex}
+
+% hack to force UTF8 compatibility (only for french)
+\lstset{
+        extendedchars=true,
+        literate={à}{{\`a}}1 {â}{{\^a}}1 %                         letter a
+                 {À}{{\`A}}1 {Â}{{\^A}}1 %                         letter A
+                 {ç}{{\c{c}}}1 %                                   letter c
+                 {Ç}{{\c{C}}}1 %                                   letter C
+                 {é}{{\'e}}1 {è}{{\`e}}1 {ê}{{\^e}}1 {ë}{{\"e}}1 % letter e
+                 {É}{{\'E}}1 {È}{{\`E}}1 {Ê}{{\^E}}1 {Ë}{{\"E}}1 % letter E
+                 {î}{{\^i}}1 {ï}{{\"i}}1 %                         letter i
+                 {Î}{{\^I}}1 {Ï}{{\"I}}1 %                         letter I
+                 {ô}{{\^o}}1 %                                     letter o
+                 {Ô}{{\^O}}1 %                                     letter O
+                 {œ}{{\oe}}1 %                                     letter oe
+                 {Œ}{{\OE}}1 %                                     letter OE
+                 {ù}{{\`u}}1 {û}{{\^u}}1 {ü}{{\"u}}1 %             letter u
+                 {Ù}{{\`U}}1 {Û}{{\^U}}1 {Ü}{{\"U}}1 %             letter U
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LISTINGS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{comment}{rgb}{0.12, 0.38, 0.18 } % adjusted, in Eclipse: {0.25, 0.42, 0.30 } = #3F6A4D
+\definecolor{keyword}{rgb}{0.37, 0.08, 0.25}  % #5F1441
+\definecolor{string}{rgb}{0.06, 0.10, 0.98} % #101AF9
+
+% "define" Scala
+\lstdefinelanguage{scala}{
+  morekeywords={abstract,case,catch,class,def,%
+    do,else,extends,false,final,finally,%
+    for,if,implicit,import,match,mixin,%
+    new,null,object,override,package,%
+    private,protected,requires,return,sealed,%
+    super,this,throw,trait,true,try,%
+    type,val,var,while,with,yield},
+  otherkeywords={=>,<-,<\%,<:,>:,\#,@},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[n]{/*}{*/},
+  morestring=[b]",
+  morestring=[b]',
+  morestring=[b]"""
+}
+
+\lstset{
+  rulecolor=\color{black!50},
+  backgroundcolor = \color{blue!10},
+  numbers=none, % line numbering
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=false,
+  commentstyle=\color{comment},
+  keywordstyle=\color{keyword},
+  stringstyle=\color{string},
+  basicstyle=\ttfamily,
+  extendedchars=true,
+  emph=[2]{In},
+  emphstyle=[2]\color{black!70},
+  morecomment=[l][\color{blue}]{Out},
+  frame=single,
+  frameround=tttt,
+  framerule=0.3pt,
+  framesep=4pt,
+  belowcaptionskip=2.1pt%,
+}
+
+\newcommand{\java}{\lstset{
+  language=java,
+  title={{\setlength{\fboxsep}{1pt}\fcolorbox{orange}{yellow!20}{\sffamily\scriptsize
+              \textcolor{gray!10}{\_}Java\textcolor{gray!10}{\_}}}}
+  }
+}
+
+\newcommand{\textcode}[1]{\lstset{
+  language=,
+  title={{\setlength{\fboxsep}{1pt}\fcolorbox{orange}{yellow!20}{\sffamily\scriptsize
+              \textcolor{gray!10}{\_}{#1}\textcolor{gray!10}{\_}}}}
+  }
+}
+
+\newcommand{\scala}{\lstset{
+  language=scala,
+  title={{\setlength{\fboxsep}{1pt}\fcolorbox{orange}{yellow!20}{\sffamily\scriptsize
+              \textcolor{gray!10}{\_}Scala\textcolor{gray!10}{\_}}}}
+  }
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\parindent=20pt
+\fancypagestyle{plain}{
+    % Headers
+    \fancyhead[R]{Internship report}
+    \fancyhead[L]{Fname Lname}
+
+    % Footers
+    \renewcommand{\footrulewidth}{0.1pt}
+    \fancyfoot[C]{MY SCHOOL\\  
+        ADDRESS - WEBSITE}
+    \fancyfoot[LE]{\ifnum\thepage>0 \thepage \fi}
+    \fancyfoot[RO]{\ifnum\thepage>0 \thepage \fi}
+}
+
+\fancypagestyle{empty}{%
+    \renewcommand{\headrulewidth}{0pt} % No sub line
+    \fancyhead{} % Empty the header
+
+    \renewcommand{\footrulewidth}{0pt}
+    \fancyfoot{}
+} 
+
+\setlist[itemize,2]{label={$\bullet$}} % use bullets for nested itemize
+
+% First page
+\newcommand{\presentation}[1]{\vspace{0.3cm}\large{\textbf{#1}}\vspace{0.3cm}\\}
+\newcommand{\presentationLarge}[1]{\vspace{0.3cm}\LARGE{\textbf{#1}}\vspace{0.3cm}\\}
+
+% Overrides chapter (numbered and no-numbered) headings: remove space, display only the title
+\makeatletter
+  \def\@makechapterhead#1{%
+  \vspace*{0\p@}% avant 50
+  {\parindent \z@ \raggedright \normalfont
+    %\ifnum \c@secnumdepth >\m@ne
+    %    \huge\bfseries \@chapapp\space \thechapter
+    %    \par\nobreak
+    %    \vskip 20\p@
+    %\fi
+    \interlinepenalty\@M
+    \Huge \bfseries \thechapter\quad #1   
+    \vskip 40\p@
+  }}
+  \def\@makeschapterhead#1{%
+  \vspace*{0\p@}% before 50
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries  #1\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+
+\newcommand{\ignore}[1]{} % inline comments
+
+\pagenumbering{arabic}
+\addtocounter{page}{-7} % page numbering starts at 1 + (-7)
+\pagestyle{plain} % uses fancy
+
+\title{Intership report}
+\author{Romain PELLERIN}
+\date\today
+
+%\setcounter{tocdepth}{4}
+
+\begin{document}
+\thispagestyle{empty} % only for the current page
+\includegraphics[height=3cm]{logo1.jpg}\hfill
+\includegraphics[height=3cm]{logo2.jpg}
+\begin{center}
+
+\vspace{2cm}
+\presentation{MY SCHOOL} 
+\presentation{Department}
+\presentation{(translated version of the above line)}
+
+\vspace{2cm}
+\noindent\fbox{
+\begin{minipage}{\textwidth}
+\begin{center}
+    \presentationLarge{Internship report}
+    \presentationLarge{\Huge{Company}}
+\end{center}
+\end{minipage}}
+\vspace{1.5cm}
+
+\presentation{x year or study}
+\presentation{2013 - 2014}
+\vspace{1.5cm}
+
+\def\arraystretch{1.5} % 1 is the default
+\begin{tabular}{|>{\hfill\arraybackslash}p{5cm}|p{5cm}|}
+\hline
+    \multicolumn{2}{|c|}{Romain \textsc{PELLERIN}}\\
+\hline
+     Teacher : & First\_name \textsc{Last\_name}\\
+\hline
+    \multicolumn{2}{|c|}{\textit{from x to y}}\\% dates
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+\thispagestyle{empty}
+~\\
+
+\newpage
+\thispagestyle{empty}
+
+\begin{center}
+\textit{\vfill Words followed by an asterisk are in the glossary.\vfill}
+\end{center}
+
+\newpage
+\thispagestyle{empty}
+~\\
+
+\input{thanks}
+\input{abstract}
+
+\tableofcontents
+
+\part{Report}
+\input{1-introduction}
+\input{2-content}
+\input{3-conclusion}
+
+a
+\glsaddall
+\printglossary[title=Glossary \& index]
+
+\nocite{*} % include everything that has not been quoted inside the bib
+\bibliographystyle{unsrt} % order of appearence
+\bibliography{bibliography}
+
+\newpage\null\thispagestyle{empty}
+% Last page
+\newpage
+\thispagestyle{empty}
+\begin{center}
+\null % workaround for \vfill to work
+\vfill
+\Huge{\textbf{Internship report}}\\
+\vspace{5cm}
+\LARGE{\textbf{School}}\\
+\LARGE{\textbf{School \#2}}\\
+\LARGE{\textbf{Department}}\\
+\vspace{5cm}
+\LARGE{City, \today}\\
+\vfill
+\end{center}
+
+\part{Extra}
+\null
+% add an entry to the ToC
+\addtocontents{toc}{%
+ \protect\vspace{1em}% 
+ \protect\noindent \textbf{Annexes}\protect\par
+ \protect\vspace{-1em}%
+}
+
+\end{document}
