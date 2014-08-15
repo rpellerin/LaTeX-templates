@@ -33,6 +33,7 @@
 \definecolor{string}{rgb}{0.06, 0.10, 0.98} % #101AF9
 
 \lstset{
+  columns=flexible, %prevent extra spaces
   rulecolor=\color{black!50},
   backgroundcolor = \color{blue!10},
   numbers=none, %left
@@ -53,7 +54,22 @@
   frameround=tttt,
   framerule=0.3pt,
   framesep=4pt,
-  belowcaptionskip=2.1pt%,
+  belowcaptionskip=2.1pt,
+  literate={à}{{\`a}}1 {â}{{\^a}}1 %                         letter a
+           {À}{{\`A}}1 {Â}{{\^A}}1 %                         letter A
+           {ç}{{\c{c}}}1 %                                   letter c
+           {Ç}{{\c{C}}}1 %                                   letter C
+           {é}{{\'e}}1 {è}{{\`e}}1 {ê}{{\^e}}1 {ë}{{\"e}}1 % letter e
+           {É}{{\'E}}1 {È}{{\`E}}1 {Ê}{{\^E}}1 {Ë}{{\"E}}1 % letter E
+           {î}{{\^i}}1 {ï}{{\"i}}1 %                         letter i
+           {Î}{{\^I}}1 {Ï}{{\"I}}1 %                         letter I
+           {ô}{{\^o}}1 %                                     letter o
+           {Ô}{{\^O}}1 %                                     letter O
+           {œ}{{\oe}}1 %                                     letter oe
+           {Œ}{{\OE}}1 %                                     letter OE
+           {ù}{{\`u}}1 {û}{{\^u}}1 {ü}{{\"u}}1 %             letter u
+           {Ù}{{\`U}}1 {Û}{{\^U}}1 {Ü}{{\"U}}1 %             letter U
+  % above is a hack to force UTF8 compatibility (only for french)
 }
 
 \newcommand{\java}{\lstset{
