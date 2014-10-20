@@ -1,6 +1,6 @@
 # LaTeX templates
 
-Here are some usefull LaTeX templates.
+Here are some useful LaTeX templates.
 
 ## Requirements
 
