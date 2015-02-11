@@ -1,7 +1,7 @@
 \documentclass[11pt,a4paper]{moderncv}
 \moderncvtheme[blue]{classic}                
 \usepackage[utf8]{inputenc}
-\usepackage[top=0.9cm, bottom=0.9cm, left=1.4cm, right=1.4cm]{geometry}
+\usepackage[top=0.7cm, bottom=0.7cm, left=1.4cm, right=1.4cm]{geometry}
 \usepackage[french]{babel}
 \setlength{\hintscolumnwidth}{2.9cm} % width of the left column (dates)
 
@@ -11,14 +11,14 @@
 \photo[64pt][0.0pt]{picture} % '64pt' is the height the picture must be resized to, 0.0pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file       
 \address{9 rue des réservoirs}{60200 Compiègne}    
 \email{contact@romainpellerin.eu}                      
-\homepage{www.romainpellerin.eu}
+\homepage{romainpellerin.eu}
 \mobile{07 85 25 71 64} 
 \extrainfo{21 ans -- Permis B}
-\quote{Recherche stage en développement logiciel}
+\quote{Recherche un stage (6 mois) en développement logiciel à partir de Septembre 2015}
 \renewcommand*{\quotefont}{\Large\bfseries}
 \begin{document}
 \makecvtitle
-
+\vspace*{-0.7cm}
 \section{Formation Universitaire}
 \cventry{2014 -- Présent}{1\iere{} année du cycle ingénieur}{UTC (60)}{}{}{Branche Génie Informatique, formation initiale} % year, degree, institution, city+picture = {\includegraphics[scale=0.5]{picture}City}, grade, description
 \cventry{2012 -- 2014}{Diplôme Universitaire de Technologie d'informatique}{IUT de Nantes (44)}{}{}{Formation initiale, 2\ieme{} de promotion}
@@ -26,16 +26,16 @@
 \cventry{Juin 2011}{Baccalauréat Scientifique SVT}{Lycée Jean de Lattre de Tassigny (85)}{}{}{Spécialité mathématiques, Mention Bien}
 
 \section{Expériences professionnelles}
-\cventry{Septembre 2014\\à Présent}{Chargé d'affaires au pôle informatique}{USEC}{Compiègne}{}{Poste semblable à celui de chef de projet, j'accompagne nos clients de la spécification de leur besoin à la livraison, pour leur apporter totale satisfaction.
+\cventry{Septembre 2014\\à Présent}{Chargé d'affaires, puis Responsable du pôle informatique}{USEC}{Compiègne}{}{Poste semblable à celui de chef de projet, j'accompagne nos clients de la spécification de leur besoin à la livraison, pour leur apporter totale satisfaction. En tant que responsable depuis Janvier 2015, je manage les chargés d'affaires en informatique.
 \begin{itemize}
   \item Rédaction de documents (devis, cahier des charges, convention client, etc)
-  \item \textit{Management} d'étudiants pour la réalisation des études
+  \item Management d'étudiants pour la réalisation des études
 \end{itemize}}
-\cventry{Juin 2013\\à Septembre 2014}{Auto-entrepreneur en programmation informatique}{}{Nantes}{}{Développement de l'application Android et du site web de la startup \textsc{WhoWanna}} %\newline{}
+\cventry{Juin 2013\\à Septembre 2014}{Auto-entrepreneur en programmation informatique}{}{Nantes}{}{Développement de l'application Android et du site web de la startup \textsc{WhoWanna}.}%\newline{}
 
 \cventry{Avril 2014\\à Juin 2014}{Stagiaire en développement logiciel}{WhoWanna}{Nantes}{}{
 \begin{itemize}%
-\item Migration du \textit{back-end} vers une solution de type \og\textit{cloud}\fg{}
+\item Migration du \textit{back-end} vers une solution de type \og\textit{cloud}\fg{} (\href{http://www.clever-cloud.com/}{Clever Cloud})
 \item Développement de la mise à jour 3.1 de l'application Android (rajout de fonctionnalités, mise à jour graphique)
 \item Changement des technologies côté serveur : de PHP vers Scala et de MySQL vers PostgreSQL
 \item Rédaction d'une documentation interne et mise en place d'un système de \textit{versioning} (Git)
@@ -47,18 +47,19 @@
 \section{Compétences en informatique}
 % \cvcomputer{category}{programs}{category}{programs}
 % \cvdoubleitem{subtitle}{text}{subtitle}{text}
-\cvitem{Langages}{Bash, C, Java (SE et EE), PHP, HTML, CSS, Javascript, Haskell (notions), Scala (notions)}
+\cvitem{Langages}{C, C++, Java (SE et EE), PHP, HTML, CSS, Javascript, Bash, x86 assembly}
 \cvitem{Analyse}{UML, Design Patterns}
 \cvitem{Bases de données}{Oracle, MySQL, PostgreSQL, Microsoft SQL Server (notions)}
-\cvitem{Systèmes}{Windows XP/7/8, GNU/Linux (Debian)}
-\cvitem{Administration}{Apache2, iptables, Fail2ban, OpenVPN, Git, Subversion}
+\cvitem{Systèmes}{GNU/Linux (Debian), Windows XP/7/8}
+\cvitem{Autres}{Apache2, iptables, fail2ban, OpenVPN, Git, Subversion, TCP/IP}
 %\cvitem{Logiciels}{LaTeX, Microsoft Office, LibreOffice, Adobe Photoshop}
 
 \section{Compétences générales}
-\cvitem{Anglais}{\textbf{Niveau professionnel} (visionnage de conférences en anglais, lecture d'articles scientifiques, séries télévisées en VO) -- \textbf{Toeic 895/990}} % \cvlanguage{Anglais}{}{}
+\cvitem{Anglais}{\textbf{Niveau professionnel} (niveau européen B2) -- \textbf{Toeic 895/990}} % \cvlanguage{Anglais}{}{}
 \cvitem{Divers}{Notions de gestion d'entreprise et de communication (enseignements d'IUT)}
 
 \section{Centres d'intérêt}
 \cvdoubleitem{\textbf{Musique}}{9 ans de guitare (rock, pop)}{\textbf{Sport}}{Course, badminton, musculation}
-\cvdoubleitem{\textbf{Informatique}}{Logiciel libre}{\textbf{Conférences}}{DevFest, Web2Day}
+\cvdoubleitem{\textbf{Informatique}}{Logiciel libre, \href{https://github.com/rpellerin}{GitHub}}{\textbf{Conférences}}{DevFest, Web2Day}
+\cvdoubleitem{\textbf{Raspberry Pi}}{Auto-hébergement, VPN, ownCloud}{}{}
 \end{document}
