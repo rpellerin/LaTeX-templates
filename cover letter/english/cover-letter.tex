@@ -3,23 +3,14 @@
 \usepackage[utf8]{inputenc}
 \usepackage[top=0.9cm, bottom=0.9cm, left=1.4cm, right=1.4cm]{geometry}
 \usepackage[english]{babel}
-\setlength{\hintscolumnwidth}{2.9cm} % width of the left column (dates)
-%\setlength{\makecvtitlenamewidth}{20cm}
-%\setlength{\maketitlewidth}{\textwidth}
-%\setlength{\maketitleboxwidth}{\textwidth}
-%\setlength{\maketitlewidth}{\textwidth}
-%\setlength{\quotewidth}{0.9\textwidth}
 
 \firstname{Romain}
 \familyname{Pellerin}
-\title{Software developer}
-%\photo[64pt][0.0pt]{picture} % '64pt' is the height the picture must be resized to, 0.0pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file       
 \address{9 rue des réservoirs}{60200 Compiègne}{France}  
 \email{contact@romainpellerin.eu}                      
 \homepage{romainpellerin.eu}
 \mobile{+33-7 85 25 71 64} 
-%\extrainfo{21 years old -- Driving licence}
-\quote{Objective: a 6-month internship in software development starting from September 2015}
+%\extrainfo{}
 \renewcommand*{\quotefont}{\Large\bfseries}
 
 \begin{document}
@@ -27,20 +18,23 @@
 \date{\today}
 \opening{Dear Sir or Madam,}
 \closing{Yours faithfully,}
-\enclosure[Attached]{resume}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\enclosure[Attached]{resume} % use an optional argument to use a string other than "Enclosure", or redefine \enclname
 \makelettertitle
-\textbf{\textit{ABOUT ME}}
 
-\textbf{\textit{WHY XXX}}
+\textbf{\textit{ABOUT ME}}\\
+...
 
-\textbf{\textit{WHY ME}}
+\bigskip
 
-I am writing to enquire if you have any vacancies in your company. I enclose my CV for your information.
+\textbf{\textit{WHY \{COMPANY NAME\}}}\\
+...
 
-As you can see, I have had extensive vacation work experience in office environments, the retail sector and service industries, giving me varied skills and the ability to work with many different types of people. I believe I could fit easily into your team.
+\bigskip
 
-I am a conscientious person who works hard and pays attention to detail. I'm flexible, quick to pick up new skills and eager to learn from others. I also have lots of ideas and enthusiasm. I'm keen to work for a company with a great reputation and high profile like [insert company name].
+\textbf{\textit{WHY ME}}\\
+...
 
-I have excellent references and would be delighted to discuss any possible vacancy with you at your convenience. In case you do not have any suitable openings at the moment, I would be grateful if you would keep my CV on file for any future possibilities.
+\bigskip
+
 \makeletterclosing
 \end{document}
