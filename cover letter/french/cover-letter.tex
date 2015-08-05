@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[top=0.9cm, bottom=0.9cm, left=1.4cm, right=1.4cm]{geometry}
 \usepackage[french]{babel}
+\usepackage{ragged2e} % alignment
 
 \firstname{Romain}
 \familyname{Pellerin}
@@ -11,7 +12,18 @@
 \homepage{romainpellerin.eu}
 \mobile{+33-7 85 25 71 64} 
 %\extrainfo{}
-\renewcommand*{\quotefont}{\Large\bfseries}
+
+% from http://mirrors.ctan.org/macros/latex/contrib/moderncv/moderncvbodyv.sty
+\makeatletter
+\renewcommand*{\makeletterclosing}{
+  \@closing\\[3em]%
+  {\null\hfill\bfseries \@firstname~\@lastname\\[1em]
+  \null\hfill\includegraphics[width=4cm]{example-image-a}}% right-aligned
+  \ifthenelse{\isundefined{\@enclosure}}{}{%
+    \\%
+    \vfill%
+    {\color{color2}\itshape\enclname: \@enclosure}}}
+\makeatother
 
 \begin{document}
 \recipient{Recruteur}{Entreprise\\123 rue\\ville}
@@ -19,7 +31,7 @@
 \opening{Madame, Monsieur,}
 \closing{Veuillez agréer, Madame Monsieur, l'expression de mes salutations distinguées.}
 \enclosure[Attaché]{CV}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
-\makelettertitle
+\makelettertitle\justifying
 
 ...
 
