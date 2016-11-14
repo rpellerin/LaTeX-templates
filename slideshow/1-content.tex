@@ -11,7 +11,7 @@
   Text
 
   \bigskip
-  
+
   \begin{quotation}
   Quote
   \end{quotation}
@@ -33,7 +33,7 @@
     \centering
     \subfloat{\label{fig:logo}\includegraphics[width=0.3\textwidth]{logo1.jpg}}
     \hspace{5pt}
-    \pause
+    \pause%
     \subfloat{\includegraphics[width=0.3\textwidth]{logo2.jpg}}
   \end{figure}
   \centering \footnotesize\textcolor{blue}{\url{http://www.somewebsite.??}}
@@ -43,7 +43,7 @@
   \begin{center}
     \includegraphics[width=0.6\textwidth]{logo1.jpg}\\
     \bigskip
-    \pause
+    \pause%
     \includegraphics[width=0.6\textwidth]{logo2.jpg}\\
     \smallskip
     \textcolor{gray}{\tiny Credit: url}
@@ -113,7 +113,7 @@
     \vspace{0.6cm}
 
     \pause[6]
-    $\hookrightarrow$ \textit{Text} ...
+    $\hookrightarrow$ \textit{Text} something
 \end{frame}
 
 \begin{frame}[t,fragile] % text on top (t)
@@ -124,11 +124,11 @@
     \begin{itemize}
       \item<2-> Text
       \item<3-> Text
-      \item<4-> Text\footnote<5->{\textit{...}} text
+      \item<4-> Text\footnote<5->{\textit{something}} text
     \end{itemize}
 
     \medskip
-    \java
+    \java%
     \pause[5]{\tiny{%
       \begin{lstlisting}
 code
