@@ -4,6 +4,7 @@
 \usepackage[top=0.6cm, bottom=0.6cm, left=0.7cm, right=0.7cm]{geometry}
 \usepackage[english]{babel}
 \setlength{\hintscolumnwidth}{3.5cm} % width of the left column (dates)
+\usepackage{multicol} % multi-columns itemize
 %\setlength{\makecvtitlenamewidth}{20cm}
 
 \firstname{Romain}
@@ -13,10 +14,10 @@
 \address{Currently living in San Francisco}{\textbf{Open to relocation}}{} % street, city, country
 \email{contact@romainpellerin.eu}
 \homepage{romainpellerin.eu}
-\mobile{+1 415-937-4830}
+\mobile{+1 (415) 937-4830}
 %\mobile{+33 6 95 60 57 81}
 \extrainfo{\href{https://github.com/rpellerin}{github.com/rpellerin}}
-\quote{Objective: a full-time job from September 2017}
+%\quote{Objective: a full-time job from September 2017}
 \renewcommand*{\quotefont}{\Large\bfseries} % override quote's default style
 
 % I took the original code from moderncvstylebanking.sty and changed line 25
@@ -48,14 +49,28 @@
 
 \begin{document}
 \makecvtitle
-
+\vspace{-35pt}
 \section{Education}
-\cventry{2014 -- present}{Diplôme d'ingénieur en informatique (Software engineering degree)}{\href{http://www.utc.fr/formations-enseignements/genie-informatique.php}{Université de Technologie de Compiègne}}{Compiègne (France)}{Expected August 2017}{} % year, degree, institution, city+picture = {\includegraphics[scale=0.5]{picture}City}, grade, description
-\cventry{2016}{Exchange program (Fall semester)}{\href{http://www.kaist.ac.kr/html/en/}{KAIST}}{Daejeon (South Korea)}{}{} % year, degree, institution, city+picture = {\includegraphics[scale=0.5]{picture}City}, grade, description
-\cventry{2012 -- 2014}{DUT Informatique (Two-year university degree in Computer Science)}{\href{http://www.iutnantes.univ-nantes.fr/321/0/fiche___formation/}{Institut Universitaire de Technologie de Nantes}}{Nantes (France)}{}{}
+\cventry{Sep 2014 -- present}{Diplôme d'ingénieur en informatique (Software engineering degree)}{\href{http://www.utc.fr/formations-enseignements/genie-informatique.php}{Université de Technologie de Compiègne}}{Compiègne (France)}{Expected August 2017}{} % year, degree, institution, city+picture = {\includegraphics[scale=0.5]{picture}City}, grade, description
+\cventry{Sep 2016 -- Dec 2016}{Exchange program}{\href{http://www.kaist.ac.kr/html/en/}{KAIST}}{Daejeon (South Korea)}{}{
+\begin{multicols}{2}
+\begin{itemize}
+\item \textbf{CS453} Automated Software Testing
+\item \textbf{CS459} Introduction to Services Computing
+\item \textbf{CS540} Network Architecture
+\item \textbf{KSE652} Social Computing Systems Design and Analysis
+\end{itemize}
+\end{multicols}
+} % year, degree, institution, city+picture = {\includegraphics[scale=0.5]{picture}City}, grade, description
+\cventry{Sep 2012 -- Jul 2014}{DUT Informatique (Two-year university degree in Computer Science)}{\href{http://www.iutnantes.univ-nantes.fr/321/0/fiche___formation/}{Institut Universitaire de Technologie de Nantes}}{Nantes (France)}{}{}
 
 \section{Professional Experience}
-\cventry{Feb 2017 -- Jul 2017}{Intern in software development}{\href{http://inovia.fr/}{Inovia Team}}{San Fransisco (USA)}{}{asm.js and WebAssembly.}
+\cventry{Feb 2017 -- Jul 2017}{Intern in software development}{\href{http://inovia.fr/}{Inovia Team}}{San Fransisco (USA)}{}{
+\begin{itemize}
+  \item Experimented asm.js and WebAssembly.
+  \item React/Redux development with \href{http://sequelizejs.com/}{Sequelize}, \href{http://graphql.org/}{GraphQL}, \href{http://www.apollodata.com/}{Apollo}, and others.
+\end{itemize}
+}
 \cventry{Sep 2015 -- Feb 2016}{Intern in mobile application development}{\href{http://www.wearesmiths.com/}{The Smiths}}{Amsterdam (The Netherlands)}{}{Developed Android and iOS applications with the Titanium framework).
 \begin{itemize}
   \item Front-end with the following frameworks: Backbone, Underscore, Titanium/Alloy
@@ -81,7 +96,7 @@
 % \cvdoubleitem{subtitle}{text}{subtitle}{text}
 \cvitem{Languages}{\textbf{JavaScript (familiar with ES6), Java, PHP, HTML, CSS}, Python, Bash, C++ (Qt)}
 \cvitem{Databases}{\textbf{PostgreSQL, MySQL}, SQLite (+ UML as a modeling language)}
-\cvitem{OSes}{\textbf{GNU/Linux} (\href{http://xubuntu.org/}{Xubuntu} as my main OS, based on Debian)}
+\cvitem{OSes}{\textbf{GNU/Linux} (\href{http://xubuntu.org/}{Xubuntu} user, a Debian/Ubuntu-based distro)}
 \cvitem{Other}{\textbf{Git, Apache2}, system administration (iptables, fail2ban, OpenVPN, TCP/IP), \LaTeX}
 
 \section{Languages}
