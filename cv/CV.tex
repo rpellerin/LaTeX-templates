@@ -1,7 +1,7 @@
 \documentclass[11pt,a4paper]{moderncv}
 \moderncvtheme[blue]{classic}
 \usepackage[utf8]{inputenc}
-\usepackage[top=1.4cm, bottom=1.4cm, left=2cm, right=2cm]{geometry}
+\usepackage[top=1.0cm, bottom=1.0cm, left=1.0cm, right=1.0cm]{geometry}
 \usepackage[english]{babel}
 \setlength{\hintscolumnwidth}{3.5cm} % width of the left column (dates)
 \usepackage{multicol} % multi-columns itemize
@@ -18,6 +18,7 @@
 \extrainfo{\href{https://github.com/rpellerin}{github.com/rpellerin}}
 %\quote{Objective: a full-time job from September 2017}
 \renewcommand*{\quotefont}{\Large\bfseries} % override quote's default style
+\definecolor{color1}{rgb}{0,0,0} % Overwrites the default blue color
 
 % I took the original code from moderncvstylebanking.sty and changed line 25
 % USEFUL for theme banking
@@ -48,46 +49,43 @@
 
 \begin{document}
 \makecvtitle
-\vspace{15pt}
+\vspace{-25pt}
 \section{Experience}
 \cventry{Oct 2020 -- Present}{Principal Engineer}{\href{https://www.doctolib.de/}{Doctolib GmbH}}{Berlin (Germany)}{}{
-    Largest ehealth company in Europe (100K+ customers, 40M+ visits per month, 7.5K requests per second) offering doctors and hospitals a software solution with services to improve the efficiency of their organization and provide their patients with a new high-end experience.\\
-Stack: Ruby on Rails, PostgreSQL, Resque, Redis, ElasticSearch, React. CI runs 20,000+ integration tests (Minitest w/ Capybara) and a few hundred model and unit tests (JavaScript and Ruby).\\
-\\
-My duties involve:
 \begin{itemize}
-    \item Follow-up work with feature teams: review of technical pre-project planning and documents, pair programming, dealing with debt and legacy code or infrastructure
-    \item Cross-team work: risks analysis, tasks priorization, tech initiaves
-    \item Support, mitigation and prevention of down incidents
-    \item Interviewing engineering managers and software engineers
+    \item Follow-up work with feature teams focused on the pro website: review of technical pre-project planning and documents, pair programming, advise and help with technical debt and legacy code
+    \item Cross-team work: large-scale projets synchronization, tasks priorization, various tech initiaves
+    \item Scability and risk management: support, mitigation and prevention of down incidents
+    \item Interviewing engineering managers and software engineers; mentorship
 \end{itemize}~\\
-    Additional relevant keywords: Monolith, AWS, New Relic, Sentry, Jira, Jest, SCSS.
+Stack: Ruby on Rails, PostgreSQL, Resque, Redis, ElasticSearch, React. Our CI executes 20,000+ integration tests (Minitest + Capybara) and a few hundred model and unit tests (JavaScript and Ruby).\\\\
+Additional relevant keywords: Monolith, AWS, TeamCity, New Relic, Sentry, Jest, SCSS.
 }
 \vspace{10pt}
-\cventry{Jan 202 -- Oct 2020}{Software Engineer}{\href{https://www.doctolib.de/}{Doctolib GmbH}}{Berlin (Germany)}{}{
+\cventry{Jan 2020 -- Oct 2020}{Software Engineer}{\href{https://www.doctolib.de/}{Doctolib GmbH}}{Berlin (Germany)}{}{
 \begin{itemize}
-    \item Worked on the pro website as a fullstack developer: Ruby on Rails, React, PG, ElasticSearch
-    \item Helping onboard new joiners and train current employees
+    \item Worked on the pro website as a fullstack developer
+    \item Helped onboard new joiners and train current employees
     \item Project management in an agile environment (SCRUM-like)
-    \item Interviewing engineering managers and software engineers
+    \item Interviewed engineering managers and software engineers
 \end{itemize}
 }
 \vspace{10pt}
 \cventry{Mar 2018 -- Dec 2019}{Software Engineer}{\href{https://www.doctolib.fr/}{Doctolib}}{Paris (France)}{}{Same as in Berlin, different feature team.}
 \vspace{10pt}
 \cventry{Sep 2017 -- Feb 2018}{Software Engineer}{\href{https://matters.tech/}{Matters}}{Paris (France)}{}{
-Worked for a client -- \href{https://wisepops.com}{Wisepops.com} -- on their new popup editor built with React.\\Stack: JavaScript, React, Redux, NodeJS, and advanced CSS.
+Worked for a client (\href{https://wisepops.com}{Wisepops.com}) on a web-based popup editor built with React.\\Stack: JavaScript (React, Redux, NodeJS), CSS.
 }
 \vspace{10pt}
 \cventry{Feb 2017 -- Jul 2017}{Software Engineer Intern}{\href{https://matters.tech/}{Matters}}{San Francisco (USA)}{}{
 Boostrapped \href{https://teamstarter.co/}{Teamstarter.co}. Also experimented new technologies: asm.js and WebAssembly.\\
-Stack: JavaScript, React, Redux, \href{https://sequelizejs.com/}{Sequelize}, \href{https://graphql.org/}{GraphQL}, \href{https://www.apollodata.com/}{Apollo}, PWA (Service Workers), CDNs.
+Stack: JavaScript (React, Redux, \href{https://sequelizejs.com/}{Sequelize}), \href{https://graphql.org/}{GraphQL}, \href{https://www.apollodata.com/}{Apollo}, PWA (Service Workers).
 }
 \vspace{10pt}
-\cventry{Sep 2015 -- Feb 2016}{Mobile Developer Intern}{\href{http://www.wearesmiths.com/}{The Smiths}}{Amsterdam (The Netherlands)}{}{Developed Android and iOS applications with the Titanium framework.
+\cventry{Sep 2015 -- Feb 2016}{Mobile Developer Intern}{\href{http://www.wearesmiths.com/}{The Smiths}}{Amsterdam (The Netherlands)}{}{
 \begin{itemize}
-  \item Front-end with the following frameworks: Backbone, Underscore, Titanium/Alloy
-  \item Back-end with Express, hosted on \href{http://www.parse.com/}{parse.com}; also some SQL and Shell-scripting
+    \item iOS/Android development with \href{https://www.appcelerator.com/Titanium/}{Titanium/Alloy (framework)}, Backbone.js, Underscore.js
+  \item Back-end development with Express.js, hosted on \href{http://www.parse.com/}{parse.com}. Also some SQL and Shell-scripting.
 \end{itemize}}
 \vspace{10pt}
 \cventry{Jun 2013 -- Sep 2014}{Android and Web Developer}{Self-employed and then intern}{Nantes (France)}{}{Developed and maintained the Android application and the website of the startup \textsc{\href{http://www.who-wanna.com/en/}{WhoWanna}}. Stack: Java, PHP, MySQL, JavaScript, HTML, CSS, Scala.}%\newline{}
@@ -97,9 +95,6 @@ Stack: JavaScript, React, Redux, \href{https://sequelizejs.com/}{Sequelize}, \hr
 \cventry{Sep 2014 -- Jul 2017}{Diplôme d'ingénieur en informatique (Software engineering degree)}{\href{https://www.utc.fr/formations-enseignements/genie-informatique.php}{Université de Technologie de Compiègne (UTC)}}{Compiègne (France)}{}{
 \begin{multicols}{2}
 \begin{itemize}
-\item \textbf{LA13} English level 3
-\item \textbf{LA15} English level 5 (business english)
-\item \textbf{LB14} English level 4 (interculturality)
 \item \textbf{LO17} Indexing and search engines
 \item \textbf{L021} Object-oriented programming (C++)
 \item \textbf{MB11} Revision of mathematics
@@ -107,14 +102,14 @@ Stack: JavaScript, React, Redux, \href{https://sequelizejs.com/}{Sequelize}, \hr
 \item \textbf{NF11} Programming language theory
 \item \textbf{NF16} Algorithms and data structures
 \item \textbf{NF17} Databases design
-\item \textbf{R003} Operations research: combinatorial optimization
+\item \textbf{RO03} Combinatorial optimization
 \item \textbf{SC12} Technology, cognition, perception
-\item \textbf{S114} Public speaking in English
-\item \textbf{S128} Interactive writing and multimedia
-\item \textbf{SRO2} Operating System: from concepts to programming
-\item \textbf{SRO3} Web application architectures
-\item \textbf{SRO5} Distributed algorithms and systems
+\item \textbf{SI28} Interactive writing and multimedia
+\item \textbf{SR02} Operating systems
+\item \textbf{SR03} Web application architectures
+\item \textbf{SR05} Distributed algorithms and systems
 \item \textbf{SY31} Sensors for smart systems
+\item \textbf{LA13, LA15, LB14, SI14} English courses
 \end{itemize}
 \end{multicols}
 } % year, degree, institution, city+picture = {\includegraphics[scale=0.5]{picture}City}, grade, description
@@ -168,7 +163,7 @@ Stack: JavaScript, React, Redux, \href{https://sequelizejs.com/}{Sequelize}, \hr
 \vspace{10pt}
 \section{Languages}
 \cvlanguage{French}{Native speaker}{}
-\cvlanguage{English}{Full professional proficiency -- European C2 level}{\textbf{TOEIC 985/990 (2016)}}
+\cvlanguage{English}{Full professional proficiency -- European C2 level}{\textbf{TOEIC 985/990 (March 2016)}}
 \cvlanguage{Spanish}{Beginner -- European A2 level}{}
 \cvlanguage{German}{Beginner -- European A2 level}{}
 
