@@ -20,6 +20,7 @@
 \renewcommand*{\quotefont}{\Large\bfseries} % override quote's default style
 \definecolor{color1}{rgb}{0,0,0} % Overwrites the default blue color
 
+\renewcommand*{\labelitemi}{--}
 % I took the original code from moderncvstylebanking.sty and changed line 25
 % USEFUL for theme banking
 % \makeatletter
@@ -49,14 +50,14 @@
 
 \begin{document}
 \makecvtitle
-\vspace{-25pt}
+\vspace{-15pt}
 \section{Experience}
 \cventry{Oct 2020 -- Present}{Principal Engineer}{\href{https://www.doctolib.de/}{Doctolib GmbH}}{Berlin (Germany)}{}{
 \begin{itemize}
-    \item Follow-up work with feature teams focused on the pro website: review of technical pre-project planning and documents, pair programming, advise and help with technical debt and legacy code
-    \item Cross-team work: large-scale projets synchronization, tasks priorization, various tech initiaves
+    \item Follow-up work with feature teams focused on the customer-facing website (as opposed to the website for patients): review of technical pre-project planning and documents, pair programming, advise and help with technical debt and legacy code
+    \item Cross-team work: large-scale projets synchronization, tasks priorization, various tech initiaves, mentorship and trainings
     \item Scability and risk management: support, mitigation and prevention of down incidents
-    \item Interviewing engineering managers and software engineers; mentorship
+    \item Interviewing engineering managers and software engineers
 \end{itemize}~\\
 Stack: Ruby on Rails, PostgreSQL, Resque, Redis, ElasticSearch, React. Our CI executes 20,000+ integration tests (Minitest + Capybara) and a few hundred model and unit tests (JavaScript and Ruby).\\\\
 Additional relevant keywords: Monolith, AWS, TeamCity, New Relic, Sentry, Jest, SCSS.
@@ -64,7 +65,7 @@ Additional relevant keywords: Monolith, AWS, TeamCity, New Relic, Sentry, Jest, 
 \vspace{10pt}
 \cventry{Jan 2020 -- Oct 2020}{Software Engineer}{\href{https://www.doctolib.de/}{Doctolib GmbH}}{Berlin (Germany)}{}{
 \begin{itemize}
-    \item Worked on the pro website as a fullstack developer
+    \item Worked on the customer website as a fullstack developer
     \item Helped onboard new joiners and train current employees
     \item Project management in an agile environment (SCRUM-like)
     \item Interviewed engineering managers and software engineers
@@ -74,11 +75,11 @@ Additional relevant keywords: Monolith, AWS, TeamCity, New Relic, Sentry, Jest, 
 \cventry{Mar 2018 -- Dec 2019}{Software Engineer}{\href{https://www.doctolib.fr/}{Doctolib}}{Paris (France)}{}{Same as in Berlin, different feature team.}
 \vspace{10pt}
 \cventry{Sep 2017 -- Feb 2018}{Software Engineer}{\href{https://matters.tech/}{Matters}}{Paris (France)}{}{
-Worked for a client (\href{https://wisepops.com}{Wisepops.com}) on a web-based popup editor built with React.\\Stack: JavaScript (React, Redux, NodeJS), CSS.
+Worked for a client (\textsc{\href{https://wisepops.com}{Wisepops.com}}) on a web-based popup editor built with React.\\Stack: JavaScript (React, Redux, NodeJS), CSS.
 }
 \vspace{10pt}
 \cventry{Feb 2017 -- Jul 2017}{Software Engineer Intern}{\href{https://matters.tech/}{Matters}}{San Francisco (USA)}{}{
-Boostrapped \href{https://teamstarter.co/}{Teamstarter.co}. Also experimented new technologies: asm.js and WebAssembly.\\
+Bootstrapped \href{https://teamstarter.co/}{Teamstarter.co}. Also experimented new technologies: asm.js and WebAssembly.\\
 Stack: JavaScript (React, Redux, \href{https://sequelizejs.com/}{Sequelize}), \href{https://graphql.org/}{GraphQL}, \href{https://www.apollodata.com/}{Apollo}, PWA (Service Workers).
 }
 \vspace{10pt}
@@ -143,22 +144,22 @@ Stack: JavaScript (React, Redux, \href{https://sequelizejs.com/}{Sequelize}), \h
 }
 
 \vspace{10pt}
-\section{Volunteer Experience}
+\section{Volunteer experience}
 \cventry{Mar 2015 -- Jun 2015}{President and co-organizer of tech talks}{\href{https://www.youtube.com/playlist?list=PL3nMxbEwNq0wE3BNx5b0EEtp8h-yvHyIy}{HumanTalks}}{Compiègne (France)}{}{10-min talks given once a month about programming languages, tools, software development, etc.\\\href{https://humantalks.com/cities/compiegne}{https://humantalks.com/cities/compiegne}}
-\cventry{Sep 2014 -- Jun 2015}{Computer Science Manager}{\href{http://www.usec-utc.fr/}{USEC} (student society)}{Compiègne (France)}{}{Was in charge of software development projects for local businesses.
+\cventry{Sep 2014 -- Jun 2015}{Project manager}{\href{http://www.usec-utc.fr/}{USEC} (student society)}{Compiègne (France)}{}{Was in charge of software development projects for local businesses.
 \begin{itemize}
   \item Wrote official documents (quotes, specifications, customer agreements)
   \item Recruited and mentored students (those who developed our clients' projects)
 \end{itemize}}
 
 \vspace{10pt}
-\section{Computer Skills}
+\section{Computer skills}
 % \cvcomputer{category}{programs}{category}{programs}
 % \cvdoubleitem{subtitle}{text}{subtitle}{text}
 \cvitem{Languages}{\textbf{JavaScript, Ruby, HTML, CSS}, Python, PHP, Java, Shell-scripting}
 \cvitem{Databases}{\textbf{PostgreSQL, MySQL}, SQLite, UML}
-\cvitem{OSes}{\textbf{GNU/Linux} (\href{https://xubuntu.org/}{Xubuntu} user, a Debian/Ubuntu-based distro)}
-\cvitem{Misc}{\textbf{React, Ruby on Rails, Git}, NodeJS, \LaTeX}
+\cvitem{Operating systems}{\textbf{GNU/Linux} (I am a \href{https://xubuntu.org/}{Xubuntu} user -- a Debian/Ubuntu-based distro)}
+\cvitem{Misc}{\textbf{React, Ruby on Rails, advanced knowledge of Git}, NodeJS, \LaTeX}
 
 \vspace{10pt}
 \section{Languages}
@@ -169,7 +170,6 @@ Stack: JavaScript (React, Redux, \href{https://sequelizejs.com/}{Sequelize}), \h
 
 \vspace{10pt}
 \section{Hobbies}
-\cvdoubleitem{\textbf{Raspberry Pi:}}{Websites, VPN, Nextcloud}{\textbf{Side-projects:}}{Android apps, web browser add-ons}
-\cvdoubleitem{\textbf{Music:}}{Guitar for fifteen years}{\textbf{Sport:}}{Workout and cycling (3000 kms in 2019)}
-\cvdoubleitem{\textbf{Conferences:}}{I gave talks (HumanTalks) and attended some such as \href{https://devfest.gdgnantes.com/}{DevFest}, \href{https://web2day.co/}{Web2Day}, React Europe}{}{}
+\cvdoubleitem{\textbf{Raspberry Pi:}}{Experiments with the camera module, OpenVPN, Nextcloud}{\textbf{Comic books:}}{The Walking Dead, Paper Girls, Saga, Low, and many others}
+\cvdoubleitem{\textbf{Sport:}}{Weight lifting and road cycling (4,000 kms in 2020)}{\textbf{Music:}}{Guitar for fifteen years}
 \end{document}
