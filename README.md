@@ -5,7 +5,7 @@ Here are some useful LaTeX templates.
 ## Requirements
 
 ```shell
-sudo apt-get install texlive-full biber
+sudo apt install texlive-full biber
 ```
 
 ## How to compile
